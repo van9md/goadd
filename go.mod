@@ -1,4 +1,4 @@
-module github.com/van9md/goadd
+module github.com/van9md/goadd/v2
 
 go 1.22.3
 
