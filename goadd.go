@@ -1,8 +1,16 @@
-//#Package by van9
+// #Package by van9
 package goadd
-//Add adds two int numbers together and return int
+
+import "golang.org/x/exp/constraints"
+
+// A number is an interface that represent any int/float
+type number interface {
+	constraints.Float | constraints.Integer
+}
+
+// Add adds two numbers together and return same type
 //
-//https://www.mathsisfun.com/numbers/addition.html
-func Add(x,y int) int {
-    return x+y
+// https://www.mathsisfun.com/numbers/addition.html
+func Add[T number](x, y T) T {
+	return x + y
 }
